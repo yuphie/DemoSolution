@@ -56,5 +56,22 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="stg" />
+    <Folder Include="stg\Tables" />
+    <Folder Include="stg\Programability" />
+    <Folder Include="stg\Programability\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DemoDatabase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Schemas\Stg.sql" />
+    <Build Include="dbo\Tables\DemoTbl.sql" />
+    <Build Include="stg\Tables\DemoTbl.sql" />
+    <Build Include="stg\Programability\Stored Procedures\MergeDemoTbl.sql" />
   </ItemGroup>
 </Project>
